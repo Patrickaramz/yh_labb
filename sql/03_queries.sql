@@ -1,18 +1,10 @@
--- Tester för att se till att databasen fungerar.
-
-
--- Här får vi fram studentens namn tillsammans med deras personnuimmer.
-SELECT 
-    Student.fornamn,
-    Student,efternamn,
-    Kansliga_uppgifter.personnmr
-FROM Student
-JOIN Kansliga_uppgifter ON Student.student_id = Kansliga_uppgifter.student_id;
-
--- Här får vi ut alla stundeter samt deras klass
 SELECT 
     Student.fornamn, 
     Student.efternamn, 
-    Klass.klassnamn
+    Klass.klassnamn,
+    Kansliga_uppgifter.personnmr
 FROM Student
-JOIN Klass ON Student.klass_id = Klass.klass_id;
+-- Kopplar tabellen Klass för att få ut klassnamnet baserat på studentens klass_id
+JOIN Klass ON Student.klass_id = Klass.klass_id
+-- Kopplar tabellen Kansliga_uppgifter för att få ut personnumret baserat på studentens student_id
+JOIN Kansliga_uppgifter ON Student.student_id = Kansliga_uppgifter.student_id;

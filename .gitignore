@@ -1,0 +1,9 @@
+# Ignorera databas-klientens egna filer
+.dbclient/
+
+# Ignorera systemfiler
+.DS_Store
+Thumbs.db
+
+# Ignorera loggar
+*.log

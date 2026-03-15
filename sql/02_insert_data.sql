@@ -1,16 +1,16 @@
 -- Lägger till Program
 INSERT INTO Program (programnamn, beskrivning) VALUES
-('Systemutvecklare Java'),
-('Cybersäkerhet');
+('Systemutvecklare Java', 'Utbildning i Java'),
+('Cybersäkerhet', 'Utbildning i säkerhet');
 
 -- Lägger till Utbildningsledare
-INSERT INTO Utbildningsledare(fornamn, efternamn, epost) VALUES
+INSERT INTO Utbildningsledare (fornamn, efternamn, epost) VALUES
 ('Patrick', 'Karam', 'patrick.karam@yrkesco.se'),
 ('Dua', 'Ali', 'dua.ali@yrkesco.se'),
 ('Hassan', 'Ibrahim', 'hassanibrahim@yrkesco.se');
 
 -- Lägger till kurser kopplade till programmen
-INSERT INTO Kurs (kursnamn, kurskod, poang, beskrivning, program_id)v VALUES
+INSERT INTO Kurs (kursnamn, kurskod, poang, beskrivning, program_id) VALUES
 ('Databasteknik', 'DT101', 25, 'Grundläggane SQL och datamoddelering', 1),
 ('Java Programmering', 'JP202', 50, 'Objektorienterad programmering', 1),
 ('Nätverkssäkerhet', 'NS404', 35, 'Skydd av infrastruktur och protokoll', 2),

@@ -13,7 +13,8 @@ CREATE TABLE Utbildningsledare (
     epost VARCHAR(100) UNIQUE
 );
 
--- Här skapar jag tabeller som behöver iformation från tabellerna ovan, detta är alltså mina Foreign Keys.
+-- Här skapar jag tabeller som behöver iformation från tabellerna ovan.
+
 -- Kurs-tabellen med kurskod och poäng enligt instruktionerna
 CREATE TABLE Kurs (
     kurs_id SERIAL PRIMARY KEY,
@@ -46,7 +47,7 @@ CREATE TABLE Student (
 --Känsliga personuppgifter separat för bättre kontroll
 CREATE TABLE Kansliga_uppgifter (
     uppgift_id SERIAL PRIMARY KEY,
-    personnmr VARCHAR(12) NOT NULL,
+    personnmr VARCHAR(13) NOT NULL,
     student_id INTEGER UNIQUE REFERENCES Student(student_id),
     ledare_id INTEGER REFERENCES Utbildningsledare(ledare_id)
 );
